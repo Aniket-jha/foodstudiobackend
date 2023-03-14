@@ -15,11 +15,11 @@ process.on("uncaughtException",(err)=>{
 })
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "backend/config/config.env" });
+  require("dotenv").config({ path: "config/config.env" });
 }
 
 
-
+console.log(process.env.DB_URL)
 
 
 connectDB();
@@ -34,9 +34,10 @@ cloudinary.config({
 
 
 
-const server = app.listen(process.env.PORT, () => {
-    console.log('Server is running on ' + process.env.PORT);
+const server = app.listen(4000, () => {
+    console.log('Server is running on ' + 4000);
 });
+
 
 
 
